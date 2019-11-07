@@ -28,7 +28,7 @@ class SpellCheckListener:
 
         # Fetch words to be ignored
         if self.PRE_RUNNER == 0:
-            self.IGNORE_WORDS = BuiltIn().get_variable_value("${IGNORE_WORDS}")
+            self.IGNORE_WORDS = BuiltIn().get_variable_value("${IGNORE_WORDS}", [])
             self.PRE_RUNNER = 1
 
         # get suite name
